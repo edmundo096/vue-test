@@ -22,8 +22,16 @@ export default {
   },
   methods: {
     login: function () {
-      this.username;
-      this.password;
+      if (this.isLoginValid()) {
+        alert(`Login of ${this.username}`)
+        this.$router.push('/')
+      } else {
+        this.msg = 'Username not valid'
+      }
+    },
+    isLoginValid () {
+      const isValid = this.username.trim().length > 0 && this.password.trim().length > 0
+      return isValid
     }
   }
 }
