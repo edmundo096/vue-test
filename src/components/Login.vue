@@ -26,7 +26,7 @@ export default {
         alert(`Login of ${this.username}`)
         this.$router.push('/')
       } else {
-        this.msg = 'Username not valid'
+        this.msg = 'User or password not valid'
       }
     },
     isLoginValid () {
